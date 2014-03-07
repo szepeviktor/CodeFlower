@@ -138,8 +138,10 @@ $ git ls-files | xargs wc -l > symfony.wc
         if (currentCodeFlower) currentCodeFlower.cleanup();
         // adapt layout size to the total number of elements
         var total = countElements(json);
-        w = parseInt(Math.sqrt(total) * 30, 10);
-        h = parseInt(Math.sqrt(total) * 30, 10);
+//        w = parseInt(Math.sqrt(total) * 30, 10);
+//        h = parseInt(Math.sqrt(total) * 30, 10);
+        w = 700;
+        h = 500;
         // create a new CodeFlower
         currentCodeFlower = new CodeFlower("#visualization", w, h).update(json);
       };
@@ -163,19 +165,6 @@ $ git ls-files | xargs wc -l > symfony.wc
         document.getElementById('visualization').scrollIntoView();
         createCodeFlower(json);
       });
-    </script>
-    <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-26354577-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
     </script>
   </body>
 </html>
